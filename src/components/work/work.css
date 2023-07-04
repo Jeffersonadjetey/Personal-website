@@ -1,0 +1,129 @@
+/* .services__container {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+} */
+.services__container {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center; /* Center vertically */
+  flex-wrap: wrap; /* Allow multiple rows if needed */
+  gap: 2rem;
+}
+
+.service {
+  /* background: var(--color-bg-variant); */
+  background: transparent;
+  border-radius: 0 0 2rem 2rem;
+  border: 1px solid var(--color-primary);
+  height: fit-content;
+  transition: var(--transition);
+}
+
+.service:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.service__head {
+  background: var(--color-primary);
+  padding: 2rem;
+  border-radius: 0 0 2rem 2rem;
+  box-shadow: 0 2rem 1rem rgba(0, 0, 0, 0.1);
+}
+
+.service__head h3 {
+  color: var(--color-bg);
+  font-size: 1 rem;
+  text-align: center;
+}
+
+.service__list {
+  padding: 2rem;
+}
+
+.service__list li {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 0.8rem;
+}
+
+.service__list-icon {
+  color: var(--color-primary);
+  margin-top: 2px;
+}
+
+.service__list p {
+  font-size: 0.9rem;
+}
+
+.job-container {
+  display: flex;
+  gap: 2rem;
+  /* background: var(--color-bg-variant); */
+  background: transparent;
+  padding: 2.4rem 5rem;
+  border-radius: 2rem;
+  border: 1px solid transparent;
+  transition: var(--transition);
+  border-color: var(--color-primary-variant);
+}
+
+.job-container:hover {
+  background: transparent;
+  border-color: var(--color-primary-variant);
+  cursor: default;
+}
+
+.job-image img {
+  width: 3rem;
+  height: 3rem;
+  object-fit: contain;
+}
+
+/* ========== MEDIA QUERIES (MEDIUM DEVICES) ========== */
+@media screen and (max-width: 1024px) {
+  .services__container {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .job-container {
+    padding: 2.4rem 1.8rem;
+  }
+
+  .service {
+    height: auto;
+  }
+}
+
+/* ========== MEDIA QUERIES (SMALL DEVICES) ========== */
+@media screen and (max-width: 600px) {
+  .services__container {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .job-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    background: var(--color-bg-variant);
+    padding: 2.4rem 1.8rem;
+    border-radius: 2rem;
+    border: 1px solid transparent;
+    transition: var(--transition);
+  }
+
+  .job-image img {
+    width: 3rem;
+    height: 3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .job-description {
+    text-align: center;
+  }
+}
