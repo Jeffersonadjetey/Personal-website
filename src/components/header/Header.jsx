@@ -5,6 +5,7 @@ import HeaderSocials from "./HeaderSocials";
 import Typed from "typed.js";
 import "./header.css";
 
+
 const Header = () => {
   const el = useRef(null);
 

@@ -19,13 +19,13 @@ const HeaderSocials = () => {
         <FaGithub />
         <span>Github</span>
       </a>
-      <a
+      {/* <a
         href= {myresume}
         target="_blank"
       >
         <BiMessageSquareDetail />
         <span>Resume</span>
-      </a>
+      </a> */}
     </div>
   );
 };

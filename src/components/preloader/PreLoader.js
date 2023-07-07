@@ -9,10 +9,10 @@ const PreLoader = () => {
   return (
     <div className="preloader">
       <div className="texts-container">
-        <span>WELCOME TO MY SITE</span>
-        {/* <span>TO</span>
+        <span>WELCOME</span>
+        <span>TO</span>
         <span>MY</span>
-        <span>SITE</span> */}
+        <span>SITE</span>
       </div>
     </div>
   );
