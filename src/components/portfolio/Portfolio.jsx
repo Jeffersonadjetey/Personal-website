@@ -33,7 +33,7 @@ const Portfolio = () => {
             <img src={IMG2} alt="" />
           </div>
           <h3>drinkWatch</h3>
-          <h6>C Programming Language</h6>
+          <h5>C</h5>
           <div className="portfolio__item-cta">
             <a href="https://docs.google.com/presentation/d/16zJb2qSbY41cy9Jpg-uu76_o7jXi8u69AUTV19R5PAs/edit#slide=id.g146a100fd73_0_139" className="btn" target="_blank">
               Report
@@ -93,7 +93,7 @@ const Portfolio = () => {
             <img src={IMG5} alt="" />
           </div>
           <h3>Tiny Search Engine</h3>
-          <h6>C Programming Language</h6>
+          <h5>C</h5>
           <div className="portfolio__item-cta">
             <a href="https://github.com/Jeffersonadjetey/Tiny-Search-Engine" className="btn" target="_blank">
               Github

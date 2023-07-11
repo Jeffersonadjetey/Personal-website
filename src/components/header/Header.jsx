@@ -1,6 +1,6 @@
 import React, { useEffect, useRef } from "react";
 import CTA from "./CTA";
-import ME from "../../assets/profile.jpg";
+import ME from "../../assets/portrait.png";
 import HeaderSocials from "./HeaderSocials";
 import Typed from "typed.js";
 import "./header.css";

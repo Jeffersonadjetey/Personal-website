@@ -2,7 +2,7 @@ import React from "react";
 import { BsLinkedin } from "react-icons/bs";
 import { FaGithub, FaDribbble } from "react-icons/fa";
 import { BiMessageSquareDetail } from "react-icons/bi";
-import myresume from "../../assets/Jeffresume.pdf"
+import myresume from "../../assets/resume.pdf"
 
 
 const HeaderSocials = () => {
@@ -19,13 +19,13 @@ const HeaderSocials = () => {
         <FaGithub />
         <span>Github</span>
       </a>
-      {/* <a
+      <a
         href= {myresume}
         target="_blank"
       >
         <BiMessageSquareDetail />
         <span>Resume</span>
-      </a> */}
+      </a>
     </div>
   );
 };

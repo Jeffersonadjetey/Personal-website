@@ -39,7 +39,7 @@ const Work = () => {
             <img src={Dartmouth} alt="Amazon logo" />
           </div>
           <div className="job-description">
-            <h3 className="job-title">Software Engineer and UI/UX designer</h3>
+            <h3 className="job-title">Undergraduate Research Assistant</h3>
             <h4>Thayer School of Engineering</h4>
             <h5>January 2022 - June 2022</h5>
           </div>
