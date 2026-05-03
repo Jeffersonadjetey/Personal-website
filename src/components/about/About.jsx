@@ -1,65 +1,64 @@
-import React from "react";
-import ME from "../../assets/IMG_8990.JPG";
-import { FaAward } from "react-icons/fa";
-import { FiUsers } from "react-icons/fi";
-import { VscFolderLibrary } from "react-icons/vsc";
 import "./about.css";
 
 const About = () => {
   return (
-    <section id="about">
-      {/* <h5>Get To Know</h5> */}
-      <h2>About Me</h2>
-
-     
-
-      <div className="container about__container">
-        <div className="about__me">
-          <div className="about__me-image">
-            <img src={ME} alt="me" />
-          </div>
-        </div>
-        
-        <div className="about__content">
-        {/* <p>
-            Hello! I&apos;m Jefferson Mubarak Adjetey, a senior at Dartmouth
-            College studying computer science. I cultivated an irresistible desire for building, designing, and scaling products. During my time at Dartmouth, I have taken amazing Computer Science and design courses that have taught me to build human-centered products. 
-          </p> */}
-          <p>Hello! My name is Jefferson Mubarak Adjetey, 
-            and I'm currently a senior pursuing a computer science degree 
-            at Dartmouth College. My passion for creating, designing, and 
-            scaling products is insatiable. Throughout my academic journey at Dartmouth, 
-            I have had the privilege of taking exceptional computer science and 
-            design courses that have equipped me with the skills to develop products that 
-            prioritize the needs of users.</p>
-          <div className="about__cards">
-            <article className="about__card">
-              <FaAward className="about__icon" />
-              <h5>Experience</h5>
-              <small>1 internship</small>
-            </article>
-
-            {/* <article className="about__card">
-              <FiUsers className="about__icon" />
-              <h5>Clients</h5>
-              <small>200+ Worldwide</small>
-            </article> */}
-
-            <article className="about__card">
-              <VscFolderLibrary className="about__icon" />
-              <h5>Projects</h5>
-              <small>10+ Completed Projects(including start-ups)</small>
-            </article>
+    <section id="about" className="about">
+      <div className="container">
+        <div className="about__inner">
+          <div className="section-header">
+            <span className="eyebrow reveal">About</span>
+            <h2 className="section-title reveal">
+              Engineer at heart, <em>builder</em> by instinct.
+            </h2>
           </div>
 
-          {/* <p>
-            Hello! I&apos;m Jefferson William Akesseh, a senior at Dartmouth
-            College studying computer science. 
-          </p> */}
+          <div className="about__prose reveal">
+            <p>
+              I'm a software engineer on the OCI Load Balancer Control Plane and
+              Global Accelerator team at Oracle, where I build APIs and
+              control-plane services that route traffic for some of the
+              world's largest workloads.
+            </p>
+            <p>
+              Before Oracle, I studied Computer Science at Dartmouth College
+              (2024) — a TuckLab Scholar and Undergraduate Research Scholar at
+              the Thayer School of Engineering, where I worked on AI-powered
+              educational systems that combine game mechanics, physical
+              interfaces, and social dynamics for children.
+            </p>
+            <p>
+              Outside my day job, I'm co-founder of{" "}
+              <a
+                className="about__link"
+                href="https://praecept.ai/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Praecept
+              </a>
+              . I care about distributed systems, thoughtful product design,
+              and building tools that hold up under real-world scale.
+            </p>
+          </div>
 
-          {/* <a href="#contact" className="btn btn-primary">
-            Let's Talk
-          </a> */}
+          <dl className="about__facts reveal">
+            <div>
+              <dt>Based in</dt>
+              <dd>United States</dd>
+            </div>
+            <div>
+              <dt>Education</dt>
+              <dd>Dartmouth College, B.A. CS '24</dd>
+            </div>
+            <div>
+              <dt>Currently</dt>
+              <dd>Software Engineer @ Oracle Cloud</dd>
+            </div>
+            <div>
+              <dt>Building</dt>
+              <dd>Praecept</dd>
+            </div>
+          </dl>
         </div>
       </div>
     </section>

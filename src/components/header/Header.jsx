@@ -1,64 +1,79 @@
-import React, { useEffect, useRef } from "react";
-import CTA from "./CTA";
-import ME from "../../assets/portrait.png";
-import HeaderSocials from "./HeaderSocials";
-import Typed from "typed.js";
+import { FaGithub, FaLinkedinIn } from "react-icons/fa";
+import { MdOutlineEmail } from "react-icons/md";
 import "./header.css";
 
-
 const Header = () => {
-  const el = useRef(null);
-
-  // useEffect(() => {
-  //   // const typed = new Typed(el.current, {
-  //   //   strings: ["CS Major", "Dartmouth College Senior"],
-  //   //   startDelay: 300,
-  //   //   typeSpeed: 100,
-  //   //   backDelay: 1000,
-  //   //   backSpeed: 100,
-  //   //   smartBackspace: true,
-  //   //   showCursor: false,
-  //   //   loop: true,
-  //   // });
-
-  //   const typed = new Typed(el.current, {
-  //     strings: ["CS Major", "Dartmouth College Senior"],
-  //     typeSpeed: 100,
-  //     backDelay: 1000,
-  //     backSpeed: 100,
-  //     showCursor: false,
-  //     loop: true,
-  //   });
-  // }, []);
-
   return (
-    <header>
-      <div className="container header__container">
-        <h5>Hello I'm</h5>
-        <h1>Jefferson Mubarak Adjetey</h1>
-        <div className="typed-block">
-          <div className="text-light">
-            <span ref={el}></span>
-          </div>
+    <header id="top" className="hero">
+      <div className="container">
+        <div className="hero__inner">
+        <div className="hero__status reveal">
+          <span className="hero__status-dot" aria-hidden="true" />
+          Available for select collaborations
         </div>
 
-        {/* <CTA /> */}
-        <HeaderSocials />
+        <h1 className="hero__title display reveal">
+          Jefferson <em>Adjetey</em>
+        </h1>
 
-        <div className="me">
-          <img src={ME} alt="me" />
+        <p className="hero__lede reveal">
+          Software Engineer at <strong>Oracle Cloud Infrastructure</strong>,
+          building developer-facing APIs and control-plane services for the OCI
+          Load Balancer at global scale. Co-founder of{" "}
+          <a
+            className="hero__inline-link"
+            href="https://praecept.ai/"
+            target="_blank"
+            rel="noreferrer"
+          >
+            Praecept
+          </a>
+          . Dartmouth Computer Science, '24.
+        </p>
+
+        <div className="hero__cta reveal">
+          <a href="#work" className="btn btn-primary">
+            See selected work
+          </a>
+          <a href="#contact" className="btn">
+            Get in touch
+          </a>
         </div>
 
-        <a href="#portfolio" className="scroll__down sd-2">
-          <div className="scroll-down-text"> Scroll Down</div>
-
-          <span className="mouse">
-            <span className="wheel"></span>
-          </span>
-        </a>
-        {/* <span className="mouse">
-          <span className="wheel"></span>
-        </span> */}
+        <ul className="hero__socials reveal" aria-label="Social links">
+          <li>
+            <a
+              href="https://github.com/Jeffersonadjetey"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="GitHub"
+            >
+              <FaGithub />
+              <span>GitHub</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="https://www.linkedin.com/in/jeffersonmubarakadjetey/"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="LinkedIn"
+            >
+              <FaLinkedinIn />
+              <span>LinkedIn</span>
+            </a>
+          </li>
+          <li>
+            <a
+              href="mailto:Jeffersonadjetey24@gmail.com"
+              aria-label="Email"
+            >
+              <MdOutlineEmail />
+              <span>Email</span>
+            </a>
+          </li>
+        </ul>
+        </div>
       </div>
     </header>
   );

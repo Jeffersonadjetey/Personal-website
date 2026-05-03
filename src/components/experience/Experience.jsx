@@ -1,119 +1,91 @@
-import React from "react";
-import { BsPatchCheckFill } from "react-icons/bs";
 import "./experience.css";
+
+const roles = [
+  {
+    company: "Oracle Cloud Infrastructure",
+    title: "Software Engineer",
+    period: "Sep 2024 — Present",
+    location: "Seattle, WA",
+    bullets: [
+      "Engineer on the OCI Load Balancer Control Plane and Global Accelerator team, building developer-facing APIs and services that manage globally distributed traffic routing at scale.",
+      "Designed and shipped distributed traffic-routing metrics and alarm systems, improving real-time observability for internal operators and external customers across multiple availability domains.",
+      "Built backend validation and lifecycle logic that proactively prevents invalid configurations, reducing support escalations and improving API usability.",
+    ],
+    tags: ["Java", "Distributed Systems", "Cloud", "APIs"],
+  },
+  {
+    company: "Citi",
+    title: "Software Engineer Intern",
+    period: "Jun 2023 — Aug 2023",
+    location: "Dallas, TX",
+    bullets: [
+      "Developed a cloud insights file viewer in Angular that let developers view, edit, and diff Helm chart files — streamlining the application deployment pipeline.",
+      "Built backend microservices with Java Spring Boot for Citi's merchant partnership platform, delivering an end-to-end digital onboarding experience.",
+    ],
+    tags: ["Angular", "Spring Boot", "Java", "Helm"],
+  },
+  {
+    company: "HackNG",
+    title: "Software Engineer & UI/UX Designer",
+    period: "Jul 2022 — Aug 2023",
+    location: "Remote",
+    bullets: [
+      "Designed and developed a cross-platform learning management system serving Nigerian students and educators, building the React frontend from the ground up.",
+      "Created high-fidelity Figma prototypes, ran user studies, and translated qualitative findings into design improvements that increased user engagement.",
+    ],
+    tags: ["React", "Figma", "User Research"],
+  },
+  {
+    company: "Thayer School of Engineering, Dartmouth",
+    title: "Undergraduate Research Assistant",
+    period: "Jan 2022 — Jun 2022",
+    location: "Hanover, NH",
+    bullets: [
+      "Built AI-powered educational systems combining game mechanics, physical interfaces, and social dynamics to create immersive learning experiences for children.",
+      "Led user studies, conducted interviews, and ran qualitative data analysis on Figma prototypes — directly informing system design iterations.",
+    ],
+    tags: ["Python", "Research", "HCI"],
+  },
+];
 
 const Experience = () => {
   return (
-    <section id="experience">
-      <h2>Experience</h2>
-      {/* <h2>My Experience</h2> */}
-
-      <div className="container experience__container">
-        <div className="experience__frontend">
-          <h3>Frontend Development</h3>
-          <div className="experience__content">
-            <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
-              <div>
-                <h4>React JS</h4>
-                <small className="text-light">Proficient</small>
-              </div>
-            </article>
-
-            <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
-              <div>
-                <h4>JavaScript</h4>
-                <small className="text-light">Proficient</small>
-              </div>
-            </article>
-
-            <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
-              <div>
-                <h4>HTML</h4>
-                <small className="text-light">Proficient</small>
-              </div>
-            </article>
-
-            <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
-              <div>
-                <h4>CSS</h4>
-                <small className="text-light">Proficient</small>
-              </div>
-            </article>
-
-            <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
-              <div>
-                <h4>TypeScript</h4>
-                <small className="text-light">Proficient</small>
-              </div>
-            </article>
-
-            <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
-              <div>
-                <h4>Angular</h4>
-                <small className="text-light">Proficient</small>
-              </div>
-            </article>
-          </div>
+    <section id="experience" className="experience">
+      <div className="container">
+        <div className="section-header">
+          <span className="eyebrow reveal">Experience</span>
+          <h2 className="section-title reveal">
+            Where I've <em>built</em>.
+          </h2>
         </div>
 
-        <div className="experience__backend">
-          <h3>Backend Development</h3>
-          <div className="experience__content">
-            <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
-              <div>
-                <h4>Java</h4>
-                <small className="text-light">Proficient</small>
+        <ol className="timeline">
+          {roles.map((r) => (
+            <li key={r.company} className="timeline__item reveal">
+              <div className="timeline__meta">
+                <time>{r.period}</time>
+                <span className="timeline__loc">{r.location}</span>
               </div>
-            </article>
-
-            <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
-              <div>
-                <h4>Python</h4>
-                <small className="text-light">Proficient</small>
+              <div className="timeline__body">
+                <h3 className="timeline__role">
+                  {r.title}
+                  <span className="timeline__sep">·</span>
+                  <span className="timeline__company">{r.company}</span>
+                </h3>
+                <ul className="timeline__bullets">
+                  {r.bullets.map((b, i) => (
+                    <li key={i}>{b}</li>
+                  ))}
+                </ul>
+                <ul className="timeline__tags" aria-label="Skills">
+                  {r.tags.map((t) => (
+                    <li key={t}>{t}</li>
+                  ))}
+                </ul>
               </div>
-            </article>
-{/* 
-            <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
-              <div>
-                <h4>Go</h4>
-                <small className="text-light">Intermediate</small>
-              </div>
-            </article> */}
-
-            {/* <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
-              <div>
-                <h4>MongoDB</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article> */}
-
-            {/* <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
-              <div>
-                <h4>Node JS</h4>
-                <small className="text-light">Experienced</small>
-              </div>
-            </article> */}
-
-            <article className="experience__details">
-              <BsPatchCheckFill className="experience__details-icon" />
-              <div>
-                <h4>C</h4>
-                <small className="text-light">Proficient</small>
-              </div>
-            </article>
-          </div>
-        </div>
+            </li>
+          ))}
+        </ol>
       </div>
     </section>
   );

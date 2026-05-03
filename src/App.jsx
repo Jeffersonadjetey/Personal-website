@@ -1,47 +1,52 @@
+import { useEffect } from "react";
 import "./App.css";
-import Header from "./components/header/Header";
-import Header1 from "./components/header1/Header1"
 import Nav from "./components/nav/Nav";
+import Header from "./components/header/Header";
 import About from "./components/about/About";
 import Experience from "./components/experience/Experience";
 import Work from "./components/work/Work";
-import Portfolio from "./components/portfolio/Portfolio";
-import Testimonials from "./components/testimonials/Testimonials";
-import Contact from "./components/contact/Contact";
-import Education from "./components/education/Education";
+import Skills from "./components/skills/Skills";
 import Footer from "./components/footer/Footer";
-import { useCallback } from "react";
-import Particles from "react-particles";
-import { loadFull } from "tsparticles";
-import PreLoader from "./components/preloader/PreLoader";
-import hexagons from "./particles/hexagons.json";
-import nasa from "./particles/nasa.json";
-import starry from "./particles/starry.json";
 
 function App() {
-  const particlesInit = useCallback(async (engine) => {
-    console.log(engine);
-    // you can initiate the tsParticles instance (engine) here, adding custom shapes or presets
-    // this loads the tsparticles package bundle, it's the easiest method for getting everything ready
-    // starting from v2 you can add only the features you need reducing the bundle size
-    await loadFull(engine);
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.05, rootMargin: "0px 0px -40px 0px" }
+    );
+
+    const id = requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        document
+          .querySelectorAll(".reveal")
+          .forEach((el) => observer.observe(el));
+      });
+    });
+
+    return () => {
+      cancelAnimationFrame(id);
+      observer.disconnect();
+    };
   }, []);
 
   return (
     <div className="App">
-      {/* <PreLoader /> */}
-      {/* <Header1 /> */}
-      <Header />
       <Nav />
-      <About />
-      <Experience />
-      <Education />
-      <Work />
-      <Portfolio /> 
-      {/* <Testimonials /> */}
-      {/* <Contact />
-      <Footer /> */}
-      {/* <Particles init={particlesInit} options={hexagons}></Particles> */}
+      <main>
+        <Header />
+        <About />
+        <Experience />
+        <Work />
+        <Skills />
+      </main>
+      <Footer />
     </div>
   );
 }
